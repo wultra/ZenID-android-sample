@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="cz.trask.zenid.sample">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <!--
     <uses-sdk tools:overrideLibrary="cz.trask.zenid.sdk" />
@@ -16,6 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <!-- This Activity has to be exported (exported = true), because it's a launcher activity with Intent filter -->
+        <!-- nosemgrep: java.android.security.exported_activity.exported_activity -->
         <activity
             android:name=".ui.MainActivity"
             android:exported="true"
